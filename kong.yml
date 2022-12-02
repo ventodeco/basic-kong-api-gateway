@@ -7,3 +7,10 @@ services:
   - name: hello-route
     paths:
     - /hello
+
+plugins:
+  - name: rate-limiting
+    service: hello-service
+    config:
+      minute: 3
+      policy: local
