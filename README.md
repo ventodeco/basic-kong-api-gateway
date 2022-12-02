@@ -27,3 +27,11 @@ docker-compose up -d
 ```
 curl http://localhost:8000/hello
 ```
+
+### Try Rate API Limiting
+
+```
+curl http://localhost:8000/hello
+```
+
+Because on the config is setting to 3 hits per minute, so you can try 4 times hitting. And you will get 'API rate limit exceeded'.
